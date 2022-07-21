@@ -14,6 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package vpplink_gen
+package main
 
 //go:generate go run github.com/edwarnicke/wrappergen/cmd@latest --binapi-package "git.fd.io/govpp.git/binapi" --output-dir ./impl
