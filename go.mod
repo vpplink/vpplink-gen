@@ -1,4 +1,4 @@
-module vpplink-gen
+module github.com/vpplink/vpplink-gen
 
 go 1.18
 
