@@ -16,10 +16,12 @@
 package {{ .PackageName }}
 import (
 	"fmt"
+
 	types "github.com/vpplink/api"
+	"github.com/pkg/errors"
+
 	"{{ .BinAPI }}/interface_types"
 	"{{ .BinAPI }}/ip_types"
-	"github.com/pkg/errors"
 	"{{ .BinAPI }}/vxlan"
 )
 func (v *Vpp) ListVXLanTunnels() ([]types.VXLanTunnel, error) {
