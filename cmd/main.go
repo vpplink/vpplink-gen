@@ -9,6 +9,7 @@ import (
 
 	"github.com/edwarnicke/wrappergen"
 	"github.com/sirupsen/logrus"
+	_ "github.com/vpplink/api"
 )
 
 //go:embed templates/*
