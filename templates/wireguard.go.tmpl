@@ -17,8 +17,10 @@ package {{ .PackageName }}
 import (
 	"fmt"
 	"net"
+
 	"github.com/pkg/errors"
 	types "github.com/vpplink/api"
+
 	"{{ .BinAPI }}/interface_types"
 	"{{ .BinAPI }}/ip_types"
 	"{{ .BinAPI }}/wireguard"

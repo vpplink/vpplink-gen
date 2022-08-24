@@ -20,9 +20,9 @@ import (
 	"sync"
 	"time"
 
-	govpp "git.fd.io/govpp.git"
-	vppapi "git.fd.io/govpp.git/api"
-	vppcore "git.fd.io/govpp.git/core"
+	govpp "go.fd.io/govpp"
+	vppapi "go.fd.io/govpp/api"
+	vppcore "go.fd.io/govpp/core"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )
@@ -35,7 +35,7 @@ const (
 // Vpp is the base struct that exposes all the methods defined
 // by the various wrappers.
 // Depending on the available APIs, this struct will implement
-// the various interfaces defined in git.fd.io/govpp.git/api/v1
+// the various interfaces defined in github.com/vpplink/api
 type Vpp struct {
 	lock   sync.Mutex
 	conn   *vppcore.Connection
@@ -108,15 +108,13 @@ func (v *Vpp) Close() error {
 	return nil
 }
 
-func (v *Vpp) SendRequestAwaitReply(request, response vppapi.Message) error {
+func (v *Vpp) SendRequestAwaitReply(request vppapi.Message, response vppapi.Message) error {
 	v.Lock()
 	defer v.Unlock()
 
 	err := v.GetChannel().SendRequest(request).ReceiveReply(response)
 	if err != nil {
 		return errors.Wrapf(err, "API internal error, msg=%s", request.GetMessageName())
-	} else if response.GetRetVal() != nil {
-		return response.GetRetVal()
 	}
 
 	return nil

@@ -16,4 +16,4 @@
 
 package main
 
-//go:generate go run github.com/edwarnicke/wrappergen/cmd@latest --binapi-package "git.fd.io/govpp.git/binapi" --output-dir ./impl
+//go:generate go run github.com/edwarnicke/wrappergen/cmd@latest --binapi-package "go.fd.io/govpp" --output-dir ./impl
