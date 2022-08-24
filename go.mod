@@ -3,7 +3,7 @@ module github.com/vpplink/vpplink-gen
 go 1.18
 
 require (
-	github.com/edwarnicke/wrappergen v0.0.0-20220721002927-44b4d61dbe48
+	github.com/edwarnicke/wrappergen v0.0.0-20220824195551-508af5e2a58e
 	github.com/sirupsen/logrus v1.9.0
 )
 

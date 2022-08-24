@@ -1,8 +1,8 @@
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/edwarnicke/wrappergen v0.0.0-20220721002927-44b4d61dbe48 h1:5O0d3R5b67kaMaXT3xyXKblkAXmqg5P0TK9D/xMkDqM=
-github.com/edwarnicke/wrappergen v0.0.0-20220721002927-44b4d61dbe48/go.mod h1:xLZrCklCnfvjLYcY22osL7t0IbvTsT+LvVXgHaICmb4=
+github.com/edwarnicke/wrappergen v0.0.0-20220824195551-508af5e2a58e h1:tcWZISLcZ/mbHNYa+fUfH3jTrWqj3zoq87reYxrEjfg=
+github.com/edwarnicke/wrappergen v0.0.0-20220824195551-508af5e2a58e/go.mod h1:xLZrCklCnfvjLYcY22osL7t0IbvTsT+LvVXgHaICmb4=
 github.com/hashicorp/go-version v1.6.0 h1:feTTfFNnjP967rlCxM/I9g701jU+RN74YKx2mOkIeek=
 github.com/hashicorp/go-version v1.6.0/go.mod h1:fltr4n8CU8Ke44wwGCBoEymUuxUHl09ZGVZPK5anwXA=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
