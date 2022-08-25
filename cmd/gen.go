@@ -14,6 +14,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build tools
+
 package main
 
-//go:generate go run github.com/edwarnicke/wrappergen/cmd@latest --binapi-package "go.fd.io/govpp" --output-dir ./impl
+import (
+	_ "github.com/edwarnicke/wrappergen/cmd"
+)
+
+//go:generate go run github.com/edwarnicke/wrappergen/cmd --binapi-package "go.fd.io/govpp" --output-dir .

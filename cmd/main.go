@@ -9,7 +9,6 @@ import (
 
 	"github.com/edwarnicke/wrappergen"
 	"github.com/sirupsen/logrus"
-	_ "github.com/vpplink/api"
 )
 
 //go:embed templates/*
@@ -17,7 +16,7 @@ var templates embed.FS
 
 func main() {
 	// Parse flags
-	binapiPkg := flag.String("binapi-package", "go.fd.io/govpp", "BinAPI Package to generate from")
+	binapiPkg := flag.String("binapi-package", "git.fd.io/govpp.git/binapi", "BinAPI Package to generate from")
 	outputDir := flag.String("output-dir", ".", "Output directory for generated files.")
 	flag.Parse()
 
@@ -26,7 +25,7 @@ func main() {
 
 	data, err := wrappergen.NewData(*binapiPkg, packageName, *outputDir)
 	if err != nil {
-		logrus.Fatalf("error creating wrappergen.Data for binapiPkg: %s packageName %s - %+v", *binapiPkg, packageName, err)
+		logrus.Fatalf("error creating wrappergen.Data for binapiPkg: %s packageName %s", *binapiPkg, packageName)
 	}
 
 	// Trim off the "templates" prefix from the paths of our templates
@@ -43,6 +42,6 @@ func main() {
 
 	// Execute all the templates
 	if err := tmpl.ExecuteAll(*outputDir, data); err != nil {
-		logrus.Fatalf("failed to execute template: %+v", err)
+		logrus.Fatalf("failed to execute template: %s", err)
 	}
 }
